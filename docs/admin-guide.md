@@ -13,6 +13,7 @@ This guide is for the people who decide what AI assistants may do in your Odoo. 
 | **MCP Server > Tools & Prompts > Prompts** | Prompts the AI client offers its user |
 | **MCP Server > Playground** | Try any tool as a given Credential or user |
 | **MCP Server > Activity** | One row per AI call, with its outcome |
+| **MCP Server > Pending confirmations** | Calls waiting for confirmation, which you can cancel |
 | **MCP Server > Settings** | Server switch, limits and client options (system administrators only) |
 
 ## How access works
@@ -139,7 +140,11 @@ Only the person whose Credential asked can approve. The link expires after 15 mi
 
 ### Following confirmations
 
-Pending confirmations don't have a menu of their own. To follow them, open **MCP Server > Activity** and use the **Confirmations** filter. It shows calls that are **Waiting for confirmation**, **Confirmed** or **Declined**, and the **Confirmation channel** of each.
+Open **MCP Server > Pending confirmations** to see the calls waiting now. Each row shows the user, the Credential, the tool, the model and records, the **Confirmation channel**, when it was asked and when it expires. The **Open** filter is on by default; **Expired**, **Declined** and **Consumed** show the rest.
+
+To stop a call, click **Cancel** on its row, or select several rows and click **Cancel** above the list. Cancelling declines the confirmation: if the AI then tries to confirm it, the call is refused and nothing changes. Each cancel adds a **Declined** row to Activity that names who cancelled. Expired confirmations can't be cancelled, because they can no longer be confirmed anyway.
+
+For the history, open **MCP Server > Activity** and use the **Confirmations** filter. It shows calls that were **Waiting for confirmation**, **Confirmed** or **Declined**, and the **Confirmation channel** of each.
 
 ## Dry runs
 
@@ -151,8 +156,8 @@ Every write can be run as a dry run: the AI sees what the call would do, and not
 | Update | Each record's current values and the new values |
 | Delete | The records that would be deleted |
 | Method call, Button tool | Which method would run on which records. The method is not called. |
-| Action tool | Each step runs and is then rolled back, so nothing is kept. Webhooks are not sent: the dry run shows the URL and the payload instead. |
-| Code tool | Nothing. Code tools have no dry run, and the AI is told so. |
+| Action tool | Each step runs and is then rolled back, so nothing is kept. Webhooks are not sent: the dry run shows the URL and the payload instead, with hidden fields shown as `(hidden)`. |
+| Code tool | Nothing. Code tools have no dry run, and the tool's description tells the AI so. |
 
 Hidden fields are left out of dry-run previews.
 
@@ -186,7 +191,7 @@ Every Access rule applies to each step: the model must allow the operation, and 
 
 If someone later edits the server action so it runs Python, the tool is blocked and marked for review. Make it a Code tool, or change the action back to no-code steps, then save the tool to review it.
 
-Email, SMS and activity templates run as configured, so they can include fields you hid. The tool form warns you and names those fields. A webhook step that would send a hidden field is refused.
+Email, SMS and activity templates and webhook steps run as configured, so they can include fields you hid, for the model or for one key. The tool form warns you and names those fields. The AI never sees them: a webhook's dry run shows them as `(hidden)`.
 
 ### Button
 
@@ -231,10 +236,10 @@ Six starters ship switched off. Use the **Starters** filter to find them.
 | `open_quotations`: a customer's open quotations | Lookup | Sales |
 | `confirm_quotation`: confirm quotations | Button | Sales |
 | `overdue_invoices`: unpaid invoices due before a date | Lookup | Accounting |
-| `log_note`: log a note on a record | Code | No, switch on by hand |
-| `schedule_follow_up`: schedule a to-do activity | Code | No, switch on by hand |
+| `log_note`: log a note on a record | Code | CRM |
+| `schedule_follow_up`: schedule a to-do activity | Code | CRM |
 
-The two Code starters check the model's Access rule before they post a note or schedule an activity. Because they are Code tools, only a system administrator can switch them on. Upgrades never overwrite your edits to a starter.
+The two Code starters check the model's Access rule before they post a note or schedule an activity. Because they are Code tools, only a system administrator can switch them on. The setup wizard is for system administrators, so its CRM preset switches them on. Upgrades never overwrite your edits to a starter.
 
 ## Prompts
 
@@ -263,7 +268,7 @@ The Playground lets you try any tool as a given Credential or user, without an A
 2. Click **Try** on a tool.
 3. Fill in the parameters.
 4. Leave **Dry run (nothing is changed)** on to preview a write, or turn it off to run it for real.
-5. Click **Run**.
+5. Click **Run**. Code tools have no dry run, so instead of the switch they show a warning and a **Run for real** button, which runs the code.
 
 If the call needs confirmation, a card shows what the AI client would ask. Click **Confirm** or **Decline**. At level **In Odoo**, you can approve only your own Credential's calls; otherwise the card says who must approve.
 
