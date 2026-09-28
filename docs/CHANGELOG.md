@@ -1,5 +1,13 @@
 # Changelog
 
+## 18.0.1.0.4 (2026-09-29)
+
+- A Pending confirmations screen lists the calls waiting for confirmation; admins can cancel one, which declines it.
+- The Playground shows Run for real for Code tools, which have no dry run, and the AI is told so.
+- A webhook dry run shows its payload with hidden fields masked instead of blocking the call; the real call sends
+  it as configured, as the tool form warns.
+- The CRM preset switches on its Code starters, Log a note and Schedule a follow-up.
+
 ## 18.0.1.0.2 (2026-09-28)
 
 - A new icon and store banner, with TechHive branding.
