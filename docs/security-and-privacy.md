@@ -63,7 +63,7 @@ These checks run on the server for every call, whichever client or tool makes it
 Some things are outside the hidden-field rules, and the admin screens say so:
 
 - **Reports.** Odoo renders a PDF report as it is, so a report can print a hidden field. Reports are off unless an admin allows them per model, and the Access rule names the hidden fields each allowed report prints.
-- **Email, SMS and activity templates** in an Action Custom tool run as configured. The tool form names any hidden fields they use.
+- **Email, SMS and activity templates and webhooks** in an Action Custom tool run as configured, so they can send a hidden field to the recipient or the webhook's address. The tool form names any hidden fields they use. The AI doesn't receive them: a webhook's dry run masks them.
 - **Code Custom tools** run Python as the calling user under Odoo's own access rights. Access rules and hidden fields don't apply to them. Only system administrators can create them.
 - **Copies of data** in other models, such as the public employee directory. The Access rule warns you to hide the same fields there.
 - **Sensitive models**, such as chatter messages, attachments and Odoo's security settings, hold copies of other data. They are blocked unless an admin unlocks each one, and every write to them is confirmed.
