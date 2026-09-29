@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Odoo-18.0%20%7C%2019.0-714B67" alt="Odoo 18.0 | 19.0">
+  <img src="https://img.shields.io/badge/Odoo-16.0%20%7C%2017.0%20%7C%2018.0%20%7C%2019.0-714B67" alt="Odoo 16.0 | 17.0 | 18.0 | 19.0">
   <img src="https://img.shields.io/badge/License-OPL--1-0A1628" alt="License OPL-1">
   <img src="https://img.shields.io/badge/Price-%24200%20USD-FF6B2B" alt="$200 USD">
 </p>
@@ -130,7 +130,7 @@ Only the fields and records your access rules allow are sent, and only to the AI
 |                   |                                                                                |
 | ----------------- | ------------------------------------------------------------------------------ |
 | **Price**         | $200 USD                                                                       |
-| **Odoo versions** | 18.0 · 19.0                                                                    |
+| **Odoo versions** | 16.0 · 17.0 · 18.0 · 19.0                                                      |
 | **License**       | OPL-1                                                                          |
 | **Covers**        | All your own databases on one Odoo version: production, staging and test       |
 | **Get it**        | [Odoo Apps listing](https://apps.odoo.com/apps/modules/19.0/th_mcp_server)     |

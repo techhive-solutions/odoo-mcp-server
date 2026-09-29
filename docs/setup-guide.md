@@ -1,12 +1,12 @@
 # Setup guide
 
-This guide takes you from installing MCP Server for AI Agents to a working AI assistant in Odoo 18.0. You install the module, run the setup wizard, create a Credential, and give your AI client the Connection URL. Most setups take about five minutes. The module runs on Odoo.sh and on your own server. It does not run on Odoo Online (SaaS).
+This guide takes you from installing MCP Server for AI Agents to a working AI assistant in Odoo 16.0, 17.0, 18.0 or 19.0. You install the module, run the setup wizard, create a Credential, and give your AI client the Connection URL. Most setups take about five minutes. The module runs on Odoo.sh and on your own server. It does not run on Odoo Online (SaaS).
 
 ![The setup wizard from start to finish](../assets/setup.gif)
 
 ## Before you start
 
-- You need Odoo 18.0 on Odoo.sh or on your own server.
+- You need Odoo 16.0, 17.0, 18.0 or 19.0 on Odoo.sh or on your own server.
 - You need to be a system administrator in Odoo to run the setup wizard and change settings.
 - Your Odoo must be reachable over HTTPS from wherever your AI client runs. Claude.ai and ChatGPT connect from the internet, so a server that is only reachable on your office network won't work with them.
 - If Odoo runs behind a reverse proxy (nginx, Caddy, a load balancer), start Odoo with `--proxy-mode`. Without it, the Connection URL and client IP addresses can be wrong, and the Overview shows a warning.
