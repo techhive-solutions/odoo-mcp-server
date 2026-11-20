@@ -275,7 +275,7 @@ The Overview and the wizard's **Server check** step show a red warning when this
 
 Each database keeps its own Connection URL, such as `https://<host>/mcp/sales_db` and `https://<host>/mcp/demo_db`. If the Overview doesn't show the warning, you don't need this line.
 
-This is covered by your included hour of setup help. We'll do it with you if you like.
+With the Recommended or Premium package, we'll do it with you.
 
 ## Staging and duplicate databases
 

@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Odoo-16.0%20%7C%2017.0%20%7C%2018.0%20%7C%2019.0-714B67" alt="Odoo 16.0 | 17.0 | 18.0 | 19.0">
   <img src="https://img.shields.io/badge/License-OPL--1-0A1628" alt="License OPL-1">
-  <img src="https://img.shields.io/badge/Price-%24200%20USD-FF6B2B" alt="$200 USD">
+  <img src="https://img.shields.io/badge/Price-from%20%24200%20USD-FF6B2B" alt="From $200 USD">
 </p>
 
 <p align="center">
@@ -105,14 +105,14 @@ The Playground, running a create as a dry run for the Sales team key.
 | Multi-database without dbfilter        |          –           |            ✓             |
 | Setup wizard & connection test         |          –           |            ✓             |
 | No-code custom tools                   |          –           |            ✓             |
-| Setup help included                    |          –           |          1 hour          |
+| Setup help and user training           |          –           | Recommended & Premium    |
 
 ## What it doesn't do
 
 - It doesn't run on Odoo Online (SaaS). You need Odoo.sh or your own server.
 - It doesn't undo AI changes. Dry run and confirmation stop mistakes before they happen.
 - It isn't a chat window inside Odoo. You keep using your own AI assistant.
-- Servers with several databases need one line added to the Odoo config. We'll do it with you during your included hour.
+- Servers with several databases need one line added to the Odoo config. With Recommended or Premium, we add it with you.
 
 ## Your data
 
@@ -125,11 +125,37 @@ Only the fields and records your access rules allow are sent, and only to the AI
 - [Security & privacy](docs/security-and-privacy.md): what is sent, to whom, and how access is enforced.
 - [Changelog](docs/CHANGELOG.md)
 
-## Pricing & Versions
+## Not just a plugin
+
+Take the plugin on its own, or let us set it up and help your team use it well.
+
+|                  | **Basic**                    | **Recommended** ⭐                                   | **Premium**                                             |
+| ---------------- | :--------------------------: | :-------------------------------------------------: | :-----------------------------------------------------: |
+| **Price**        | **$200**                     | **$500**                                            | **Custom quote**                                        |
+| What you get     | The plugin from Odoo Apps    | The $200 plugin plus $300 of services from TechHive | Everything in Recommended, plus coaching and a review   |
+| Every feature    | ✓                            | ✓                                                   | ✓                                                       |
+| Setup help       | You use the setup wizard     | We install and connect it with you                  | We install and connect it with you                      |
+| User training    | –                            | ✓                                                   | ✓                                                       |
+| Prompt coaching  | –                            | –                                                   | ✓                                                       |
+| Prompt review after a month | –                 | –                                                   | ✓                                                       |
+
+**Prompt coaching.** Most people who use an ERP are not prompt engineers. The data is already in Odoo, it just needs the right question. We guide your users so they get better results.
+
+**Prompt review.** A month later, we go over the prompts with your users and revise them where needed.
+
+## How it works
+
+1. **Buy** *(all packages)*: buy the plugin on [Odoo Apps](https://apps.odoo.com/apps/modules/19.0/th_mcp_server). For Recommended or Premium, [email us](mailto:info@techhivesolutions.com?subject=MCP%20Server%20packages) after your purchase.
+2. **Set up** *(all packages)*: install the module and connect your AI assistant with the setup wizard. With Recommended or Premium, we do it with you.
+3. **Train** *(Recommended & Premium)*: we train your users to work in Odoo through their AI assistant, within the access rules you set.
+4. **Coach** *(Premium)*: we help your users ask the right questions, so they get better answers from the data already in Odoo.
+5. **Review** *(Premium)*: a month later, we go over the prompts with your users and revise them where needed.
+
+## Versions
 
 |                   |                                                                                |
 | ----------------- | ------------------------------------------------------------------------------ |
-| **Price**         | $200 USD                                                                       |
+| **Price**         | $200 USD on Odoo Apps (Basic)                                                  |
 | **Odoo versions** | 16.0 · 17.0 · 18.0 · 19.0                                                      |
 | **License**       | OPL-1                                                                          |
 | **Covers**        | All your own databases on one Odoo version: production, staging and test       |
@@ -139,7 +165,7 @@ Only the fields and records your access rules allow are sent, and only to the AI
 
 Built by **TechHive Solutions**, a certified Odoo Ready Partner and official Anthropic Claude Partner. We build AI integrations, ERP setups, custom Odoo plugins, and enterprise apps.
 
-Every purchase includes one hour of setup help by call or email. Custom tools, integrations and configuration beyond that cost $29/hour. Want to see it first? Book a 15-minute demo by email.
+For Recommended or a Premium quote, email us. Custom tools, integrations and configuration beyond the packages cost $29/hour. Want to see it first? Book a 15-minute demo by email.
 
 - 🌐 [techhivesolutions.com](https://techhivesolutions.com)
 - ✉️ [info@techhivesolutions.com](mailto:info@techhivesolutions.com)
