@@ -163,7 +163,7 @@ Take the plugin on its own, or let us set it up and help your team use it well.
 
 ## Support
 
-Built by **TechHive Solutions**, a certified Odoo Ready Partner and official Anthropic Claude Partner. We build AI integrations, ERP setups, custom Odoo plugins, and enterprise apps.
+Built by **TechHive Solutions**, a certified Odoo Partner and official Anthropic Claude Partner. We build AI integrations, ERP setups, custom Odoo plugins, and enterprise apps.
 
 For Recommended or a Premium quote, email us. Custom tools, integrations and configuration beyond the packages cost $29/hour. Want to see it first? Book a 15-minute demo by email.
 
